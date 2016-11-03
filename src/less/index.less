@@ -1,14 +1,24 @@
-@base: #f938ab;
+@side-color: #f5f5f5;
+html{
+  height: 100%;
+}
+body{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row;
+  height: 100%;
+}
+.side{
+  width: 350px;
+  background-color: @side-color;
+}
+.content{
+  flex: 1;
+}
 
-.box-shadow(@style, @c) when (iscolor(@c)) {
-  -webkit-box-shadow: @style @c;
-  box-shadow:         @style @c;
-}
-.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
-  .box-shadow(@style, rgba(0, 0, 0, @alpha));
-}
-.box {
-  color: saturate(@base, 5%);
-  border-color: lighten(@base, 30%);
-  div { .box-shadow(0 0 5px, 30%) }
+@media screen and (max-width: 600px) {
+    .side {
+        width: 50px;
+    }
 }
