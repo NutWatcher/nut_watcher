@@ -1,1 +1,74 @@
-<%- partial('_partial/archive', {pagination: 2, index: true}) %>
+<div class="side">
+  <div class="side_header">
+    <div class="side_header_name"><p>坚果贩子</p></div>
+    <div class="side_header_img">
+      <img src='./touxiang.jpg'></img>
+    </div>
+  </div>
+  <div class="side_nav_warp">
+    <div class="side_nav">
+      <div class="side_nav_item"><p>归档</p></div>
+      <div class="side_nav_item"><p>分类</p></div>
+      <div class="side_nav_item"><p>关于我</p></div>
+    </div>
+
+  </div>
+</div>
+<div class="content">
+  <div class="content_warp">
+    <% page.posts.each(function(post){ %>
+      <%- partial('_partial/article', {post: post, index: true}) %>
+    <% }) %>
+    <div class="content_post_list">
+      <div class="post_title_warp">
+        <p class="title"><a>这是一篇用来测试的文章</a></p>
+      </div>
+      <div class="post_tag_warp">
+        <div class="post_date"><span>2016-11-7</span></div>
+        <div class="post_tag">
+          <span>生活</span>
+          <span>思考</span>
+          <span>code</span>
+        </div>
+      </div>
+      <div class="post_content_warp">
+        <p class="post_content">这是一篇用来测试是的的文章</p>
+        <p class="post_content">这是一篇用来测试是的的文章</p>
+      </div>
+    </div>
+    <div class="content_post_list">
+      <div class="post_title_warp">
+        <p class="title"><a>这是一篇用来测试的文章hengchangsdfjlsdfj  这是一篇用来测试的文章hengchangsdfjlsdfj这是一篇用来测试的文章hengchangsdfjlsdfj</a></p>
+      </div>
+      <div class="post_tag_warp">
+        <div class="post_date"><span>2016-11-7</span></div>
+        <div class="post_tag">
+          <span>生活</span>
+          <span>思考</span>
+          <span>code</span>
+        </div>
+      </div>
+      <div class="post_content_warp">
+        <p class="post_content">这是一篇用来测试是的的文章</p>
+        <p class="post_content">这是一篇用来测试是的的文章</p>
+      </div>
+    </div>
+    <div class="content_post_list">
+      <div class="post_title_warp">
+        <p class="title"><a>这是一篇用来测试的文章</a></p>
+      </div>
+      <div class="post_tag_warp">
+        <div class="post_date"><span>2016-11-7</span></div>
+        <div class="post_tag">
+          <span>生活</span>
+          <span>思考</span>
+          <span>code</span>
+        </div>
+      </div>
+      <div class="post_content_warp">
+        <p class="post_content">这是一篇用来测试是的的文章</p>
+        <p class="post_content">这是一篇用来测试是的的文章</p>
+      </div>
+    </div>
+  </div>
+</div>
