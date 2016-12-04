@@ -63,14 +63,70 @@ a {
   margin: 30px;
   max-width: 700px;
 }
-.content .content_warp .content_post_list {
+.post_tag a {
+  color: #999999;
+  text-decoration: none;
+}
+.post_tag a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.post_content .post_title_warp .title {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #555555;
+  margin: 10px;
+}
+.post_content .post_title_warp a {
+  color: #555555;
+  font-weight: bold;
+  font-size: 28px;
+  font-weight: 1.5;
+}
+.post_content .post_title_warp a:hover {
+  cursor: default;
+}
+.post_content .post_content_warp {
+  margin: 60px 13px 20px 13px;
+}
+.post_content .post_content_warp p {
+  color: #999999;
+  font-size: 16px;
+  font-weight: 1.7;
+}
+.post_content .post_tag_warp {
+  margin-left: 13px;
+  color: #999999;
+  border-top: 1px dashed #d9d9d9;
+}
+.post_content .post_tag_warp .post_tag span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.post_content .post_tag_warp div {
+  display: inline-block;
+}
+.post_content .post_tag_warp .post_next {
+  float: right;
+}
+.post_content .post_tag_warp .post_next a {
+  color: #999999;
+  text-decoration: none;
+}
+.post_content .post_tag_warp .post_next a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.index_content_post_list {
   margin-bottom: 50px;
   border-bottom: 1px dashed #d9d9d9;
 }
-.content .content_warp .content_post_list .post_title_warp {
+.index_content_post_list .post_title_warp {
   border-left: 2px solid #993333;
 }
-.content .content_warp .content_post_list .post_title_warp .title {
+.index_content_post_list .post_title_warp .title {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -80,33 +136,35 @@ a {
   font-weight: 1.5;
   margin: 10px;
 }
-.content .content_warp .content_post_list .post_title_warp a {
+.index_content_post_list .post_title_warp a {
+  text-decoration: none;
   color: #555555;
   font-weight: bold;
   font-size: 22px;
   font-weight: 1.5;
 }
-.content .content_warp .content_post_list .post_title_warp a:hover {
+.index_content_post_list .post_title_warp a:hover {
   cursor: pointer;
+  text-decoration: underline;
   color: #993333;
 }
-.content .content_warp .content_post_list .post_content_warp {
+.index_content_post_list .post_content_warp {
   margin: 20px 13px;
 }
-.content .content_warp .content_post_list .post_content_warp p {
+.index_content_post_list .post_content_warp p {
   color: #999999;
   font-size: 16px;
   font-weight: 1.7;
 }
-.content .content_warp .content_post_list .post_tag_warp {
+.index_content_post_list .post_tag_warp {
   margin-left: 13px;
   color: #999999;
 }
-.content .content_warp .content_post_list .post_tag_warp .post_tag span:hover {
+.index_content_post_list .post_tag_warp .post_tag span:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-.content .content_warp .content_post_list .post_tag_warp div {
+.index_content_post_list .post_tag_warp div {
   display: inline-block;
 }
 @media screen and (max-width: 600px) {

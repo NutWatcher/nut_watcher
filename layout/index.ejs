@@ -1,25 +1,10 @@
-<div class="side">
-  <div class="side_header">
-    <div class="side_header_name"><p>坚果贩子</p></div>
-    <div class="side_header_img">
-      <img src='./touxiang.jpg'></img>
-    </div>
-  </div>
-  <div class="side_nav_warp">
-    <div class="side_nav">
-      <div class="side_nav_item"><p>归档</p></div>
-      <div class="side_nav_item"><p>分类</p></div>
-      <div class="side_nav_item"><p>关于我</p></div>
-    </div>
-
-  </div>
-</div>
+  <%- partial('_partial/lyy_side') %>
 <div class="content">
   <div class="content_warp">
     <% page.posts.each(function(post){ %>
       <%- partial('_partial/article', {post: post, index: true}) %>
     <% }) %>
-    <div class="content_post_list">
+    <div class="index_content_post_list">
       <div class="post_title_warp">
         <p class="title"><a>这是一篇用来测试的文章</a></p>
       </div>
@@ -36,7 +21,7 @@
         <p class="post_content">这是一篇用来测试是的的文章</p>
       </div>
     </div>
-    <div class="content_post_list">
+    <div class="index_content_post_list">
       <div class="post_title_warp">
         <p class="title"><a>这是一篇用来测试的文章hengchangsdfjlsdfj  这是一篇用来测试的文章hengchangsdfjlsdfj这是一篇用来测试的文章hengchangsdfjlsdfj</a></p>
       </div>
@@ -53,7 +38,7 @@
         <p class="post_content">这是一篇用来测试是的的文章</p>
       </div>
     </div>
-    <div class="content_post_list">
+    <div class="index_content_post_list">
       <div class="post_title_warp">
         <p class="title"><a>这是一篇用来测试的文章</a></p>
       </div>

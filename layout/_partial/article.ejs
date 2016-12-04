@@ -1,13 +1,13 @@
-<div class="content_post_list">
+<div class="index_content_post_list">
   <div class="post_title_warp">
-    <p class="title"><a><%= post.title %></a></p>
+    <p class="title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></p>
   </div>
   <div class="post_tag_warp">
     <div class="post_date"><span><%= date(post.date, null) %></span></div>
     <div class="post_tag">
       <% if (post.tags && post.tags.length){ %>
         <% post.tags.each(function(tag){ %>
-            <span><%= tag.name %></span>
+            <span class="post_tag"><a class="" href="<%- url_for(tag.path) %>"><%= tag.name %><a></span>
         <%}); %>
       <% } %>
     </div>

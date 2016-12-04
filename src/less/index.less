@@ -68,56 +68,123 @@ p, span, a{
   .content_warp{
     margin: 30px;
     max-width: 700px;
-    .content_post_list{
-      margin-bottom: 50px;
-      border-bottom: 1px dashed @post-separator-color;
-      .post_title_warp{
-        border-left: 2px solid @post-list-title-border-color ;
-        .title{
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow:ellipsis;
-          color: @post-list-title-color;
-          font-weight: bold;
-          font-size: 22px;
-          font-weight: 1.5;
-          margin: 10px;
-        }
-        a{
-          color: @post-list-title-color;
-          font-weight: bold;
-          font-size: 22px;
-          font-weight: 1.5;
-        }
-        a:hover{
-          cursor: pointer;
-          color: @post-list-title-border-color;
-        }
+
+  }
+}
+.post_tag{
+  a{
+      color:@post-list-content-color;
+      text-decoration: none;
+  }
+  a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+.post_content{
+  .post_title_warp{
+    .title{
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow:ellipsis;
+      color: @post-list-title-color;
+      margin: 10px;
+    }
+    a{
+      color: @post-list-title-color;
+      font-weight: bold;
+      font-size: 28px;
+      font-weight: 1.5;
+    }
+    a:hover{
+      cursor: default;
+    }
+  }
+  .post_content_warp{
+    margin: 60px 13px 20px 13px;
+    p{
+      color:@post-list-content-color;
+      font-size: 16px;
+      font-weight: 1.7;
+    }
+  }
+  .post_tag_warp{
+    margin-left: 13px;
+    color: @post-tag-color;
+    border-top: 1px dashed @post-separator-color;
+    .post_tag{
+      span:hover{
+        text-decoration: underline;
+        cursor: pointer;
       }
-      .post_content_warp{
-        margin: 20px 13px;
-        p{
+    }
+    div{
+      display: inline-block;
+    }
+    .post_next{
+      float:right;
+      a{
           color:@post-list-content-color;
-          font-size: 16px;
-          font-weight: 1.7;
-        }
+          text-decoration: none;
       }
-      .post_tag_warp{
-        margin-left: 13px;
-        color: @post-tag-color;
-        .post_tag{
-          span:hover{
-            text-decoration: underline;
-            cursor: pointer;
-          }
-        }
-        div{
-          display: inline-block;
-        }
+      a:hover{
+        cursor: pointer;
+        text-decoration: underline;
       }
     }
   }
 }
+.index_content_post_list{
+    margin-bottom: 50px;
+    border-bottom: 1px dashed @post-separator-color;
+    .post_title_warp{
+      border-left: 2px solid @post-list-title-border-color ;
+      .title{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        color: @post-list-title-color;
+        font-weight: bold;
+        font-size: 22px;
+        font-weight: 1.5;
+        margin: 10px;
+      }
+      a{
+        text-decoration: none;
+        color: @post-list-title-color;
+        font-weight: bold;
+        font-size: 22px;
+        font-weight: 1.5;
+      }
+      a:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        color: @post-list-title-border-color;
+      }
+    }
+    .post_content_warp{
+      margin: 20px 13px;
+      p{
+        color:@post-list-content-color;
+        font-size: 16px;
+        font-weight: 1.7;
+      }
+    }
+    .post_tag_warp{
+      margin-left: 13px;
+      color: @post-tag-color;
+      .post_tag{
+        span:hover{
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      div{
+        display: inline-block;
+      }
+    }
+  }
 
 @media screen and (max-width: 600px) {
     .side {

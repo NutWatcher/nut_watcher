@@ -1,1 +1,30 @@
-<%- partial('_partial/article', {post: page, index: false}) %>
+<%- partial('_partial/lyy_side') %>
+<div class="content">
+  <div class="content_warp">
+    <div class="post_content">
+      <div class="post_title_warp">
+        <p class="title"><a><%= page.title %></a></p>
+      </div>
+
+      <div class="post_content_warp">
+         <%- page.content %>
+      </div>
+
+      <div class="post_tag_warp">
+        <div class="post_date"><span>2016-11-7</span></div>
+        <div class="post_tag">
+          <% if (page.tags && page.tags.length){ %>
+            <% page.tags.each(function(tag){ %>
+                <span><a href="<%- url_for(tag.path) %>"><%= tag.name %><a></span>
+            <%}); %>
+          <% } %>
+        </div>
+        <div class="post_next">
+          <% if (page.next){ %>
+            <p class="title">下一篇: <a href="<%- url_for(page.next.path) %>"><%= page.next.title %></a></p>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
