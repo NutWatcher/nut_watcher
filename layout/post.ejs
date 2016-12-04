@@ -11,11 +11,11 @@
       </div>
 
       <div class="post_tag_warp">
-        <div class="post_date"><span>2016-11-7</span></div>
+        <div class="post_date"><span><%= date(page.date, 'YYYY/M/D') %></span></div>
         <div class="post_tag">
           <% if (page.tags && page.tags.length){ %>
             <% page.tags.each(function(tag){ %>
-                <span><a href="<%- url_for(tag.path) %>"><%= tag.name %><a></span>
+                <span class="post_tag"><a class="" href="<%- url_for(tag.path) %>"><%= tag.name %><a></span>
             <%}); %>
           <% } %>
         </div>
