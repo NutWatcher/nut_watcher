@@ -1,1 +1,23 @@
-<%- partial('_partial/archive', {pagination: config.archive, index: true}) %>
+<%- partial('_partial/lyy_side') %>
+<div class="content">
+  <div class="content_warp">
+    <div class="archive_content">
+      <% var last; %>
+      <% page.posts.each(function(post, i){ %>
+        <% var year = date(post.date, 'YYYY-M'); %>
+        <% if (last != year){ %>
+          <% if (last != null){ %>
+          </ul></div>
+          <% } %>
+          <% last = year; %>
+          <div class="archive_content_list">
+            <p class="archive_date"><%= year %></p>
+            <ul>
+        <% } %>
+        <li><p class="archive_title"><a target="_blank" href="<%- url_for(post.path) %>"><%= post.title %></a></p></li>
+      <% }) %>
+      <% if (page.posts.length){ %>
+        </ul></div>
+      <% } %>
+  </div>
+</div>
