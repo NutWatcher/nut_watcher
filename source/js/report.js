@@ -1,7 +1,7 @@
 $(function(){
   $.ajax({
     url:"http://of6m03mmi.bkt.clouddn.com/111.txt",
-    method:"get",
+    method:"post",
     success:function(msg){
       console.log(1);
 
