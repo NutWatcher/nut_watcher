@@ -1,0 +1,9 @@
+$(function(){
+  $.ajax({
+    url:"http://of6m03mmi.bkt.clouddn.com/touxiang.jpg",
+    method:"get",
+    success:function(msg){
+      console.log(1);
+    }
+  })
+});
