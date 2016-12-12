@@ -32,7 +32,14 @@
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <% } %>
   <%- css('css/out.css') %>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+  <%- css('css/tomorrow-night-eighties.min.css') %>
+  <%- js('js/prettify.js') %>
+  <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(window).load(function(){
+ $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+   prettyPrint();
+ })
+ 
+  </script>
 </head>
